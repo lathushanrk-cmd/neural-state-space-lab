@@ -1,34 +1,43 @@
-# Neural State Space Lab — validation record
+# Validation record — Neural State Space Lab 0.9.0
 
-**Package version:** 0.9.0 (research pre-release candidate). These are software-engineering and mathematical synthetic checks, **not biological validation**.
+This report distinguishes tests of the software from evidence about real neural systems.
 
-## Previously executed locally on the supplied archive
+## Checks of the packaged implementation
 
-| Check | Recorded result | Scope |
-|---|---|---|
-| Unit tests | 39 passed | Including 2 offline synthetic MNE event-mapping tests |
-| Compilation | Passed | Source, reproduction scripts and tests |
-| Synthetic demonstration | Four PNG, four SVG and JSON produced | Seeded simulations and exact model propagation |
-| Synthetic notebooks | Both ran | No external EEG download |
-| Wheel | Built and imported | Existing Linux scientific Python environment |
-| Internal Markdown links | Checked | Relative targets in local archive |
-| EEG event codes | Explicit `T1 → hands=2`, `T2 → feet=3` tested | Artificial MNE RawArray annotations only |
+The original local release checks reported:
 
-**Remote repository results may differ until GitHub Actions complete.** Never report a workflow as passing merely because its YAML file exists.
+| Check | Recorded outcome |
+| --- | --- |
+| Python unit tests | 39 passed |
+| Source compilation | Passed |
+| Synthetic figure generation | Four PNG figures, four SVG figures and numerical metadata generated |
+| Synthetic notebook examples | Executed |
+| Python wheel build and import | Passed in an existing Linux Python environment |
+| MNE annotation mapping | Tested using artificial MNE recordings, not downloaded participant EEG |
 
-## Key scientific correction
+## Hosted checks
 
-The EEG script extracts hand/foot annotations with `mne.events_from_annotations(..., event_id={"hands":2,"feet":3})` and passes the returned event table to `mne.Epochs`, rather than relying on implicit annotation numbering. It also checks for missing cue types and excludes rest events. Real PhysioNet run execution remains unverified.
+The GitHub repository has subsequently run automated tests successfully on Ubuntu and Windows runners, as well as lint, a strict documentation build and a reproducible synthetic-figure verification job.
 
-## Unverified
+The [Actions history](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions) is the authoritative record for each commit. The workflow generates verification figures from source into a separate output directory; it does not silently alter scientific values. Passing hosted Windows checks is not equivalent to a separate installation test on a researcher's own laptop.
 
-- Native Windows installation and execution on an independently configured machine.
-- Real PhysioNet EEGBCI download and participant-level results.
-- Remote CI until results appear in the repository Actions tab.
-- Independent cross-subject, biological and clinical validation.
-- Package publication on PyPI, registered DOI and external peer review.
+## What the checks do and do not establish
 
-## Repeat core checks
+- Known-system simulations test numerical behaviour under explicitly defined mathematical dynamics.
+- Regression-to-the-mean controls illustrate how conditional selection can produce misleading apparent recovery.
+- Training-only fitting and split-aware reference construction reduce common forms of data leakage.
+- An in-silico state displacement is not an observed response to physical neural stimulation.
+- A decreasing reference distance does not establish a biological attractor or restorative mechanism.
+
+## Not independently verified
+
+- Execution of the optional PhysioNet EEGBCI example against downloaded recordings.
+- Cross-participant generalization on experimental neuroscience datasets.
+- Independent biological or clinical validation.
+- Distribution on PyPI, a registered DOI or peer-reviewed scientific publication.
+- Installation on an independently configured Windows research laptop.
+
+## Commands for reproduction
 
 ```bash
 python -m pip install -e ".[dev]"
@@ -39,11 +48,4 @@ python reproduce/figure_1.py
 python reproduce/figure_2.py
 ```
 
-Optional separately network-dependent run:
-
-```bash
-python -m pip install -e ".[eeg]"
-python reproduce/eegbci_demo.py
-```
-
-A synthetic rollout validates its mathematical implementation, not its use as a description of living brain dynamics. Declining reference distance alone is insufficient evidence for a biological attractor.
+The optional external-data script is `reproduce/eegbci_demo.py` (requires `.[eeg]`). Report its results only after actually executing and checking the analysis.
