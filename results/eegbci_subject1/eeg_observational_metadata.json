@@ -1,0 +1,18 @@
+{
+  "event_mapping": {
+    "feet": 3,
+    "hands": 2
+  },
+  "dataset": "PhysioNet EEGBCI motor imagery",
+  "participant": "subject 1",
+  "runs": [
+    6,
+    10,
+    14
+  ],
+  "train_trials": 30,
+  "test_trials": 15,
+  "seed": 42,
+  "scope": "descriptive observational held-out trial analysis, no inferential p-values",
+  "limitation": "single participant; no independent-subject generalization; not a perturbation experiment"
+}
