@@ -26,7 +26,7 @@ nssl-demo --output outputs/synthetic
 
 Browse `assets/` for simulated trajectories and regression-to-the-mean plots, and `docs/` for scientific concepts and limitations.
 
-Optional public EEGBCI observational example (not yet independently verified on downloaded data):
+A public EEGBCI observational example has been verified on downloaded recordings for subject 1. See [its recorded output](docs/physionet_observational_result.md). To reproduce:
 
 ```bash
 python -m pip install -e ".[eeg]"
