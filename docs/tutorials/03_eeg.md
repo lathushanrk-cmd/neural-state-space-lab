@@ -1,6 +1,6 @@
 # Optional PhysioNet EEGBCI example
 
-This uses public PhysioNet EEG Motor Movement/Imagery data, subject 1, runs 6, 10 and 14. It is **observational**. The script was successfully executed on public recordings on a GitHub runner; see the [verified data report](physionet_observational_result.md) and [figure](../../results/eegbci_subject1/eeg_observational.png).
+This uses public PhysioNet EEG Motor Movement/Imagery data, subject 1, runs 6, 10 and 14. It is **observational**. The script was successfully executed on public recordings on a GitHub runner; see the [verified data report](physionet_observational_result.md) and [figure](https://github.com/lathushanrk-cmd/neural-state-space-lab/blob/main/results/eegbci_subject1/eeg_observational.png).
 
 ```bash
 python -m pip install -e ".[eeg]"
