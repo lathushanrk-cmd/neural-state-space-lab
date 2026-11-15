@@ -28,7 +28,7 @@ def main():
     import mne
     from mne.datasets import eegbci
     from mne.io import read_raw_edf
-    files = eegbci.load_data(1, [6,10,14])
+    files = eegbci.load_data(1, [6,10,14], update_path=True)
     raws = [read_raw_edf(f, preload=True, verbose=False) for f in files]
     raw = mne.concatenate_raws(raws)
     events, event_id = extract_motor_imagery_events(raw)
