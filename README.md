@@ -142,7 +142,7 @@ Interpretation requires the perturbation size, reference, observation window, mo
 
 ## 8. Scientific validation
 
-Local archive validation reported **39 passing tests**, synthetic demonstration execution, wheel build and imported installation, including offline tests of explicit MNE event mapping. These results **do not** establish native Windows execution, downloaded PhysioNet EEG results, remote CI status or biological validation. See the [validation report](VALIDATION_REPORT.md) and the repository [Actions](../../actions) tab for the actual remote status.
+Local archive validation reported **39 passing tests**, synthetic demonstration execution, wheel build and imported installation, including offline tests of explicit MNE event mapping. These results **do not** establish native Windows execution, downloaded PhysioNet EEG results, remote CI status or biological validation. See the [validation report](VALIDATION_REPORT.md) and the repository [Actions](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions) tab for the actual remote status.
 
 ## 9. Project structure
 
