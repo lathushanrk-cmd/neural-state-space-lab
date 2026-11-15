@@ -1,0 +1,24 @@
+site_name: Neural State Space Lab
+site_description: Open-source neural population state-space perturbation and recovery analysis
+repo_name: neural-state-space-lab
+repo_url: https://github.com/lathushanrk-cmd/neural-state-space-lab
+nav:
+  - Home: index.md
+  - Concepts: concepts.md
+  - Scientific design: scientific_assumptions.md
+  - Experiment design: experimental_design.md
+  - Data: data.md
+  - Perturbations: perturbations.md
+  - Dynamics: dynamics.md
+  - Metrics: metrics.md
+  - Null models: null_models.md
+  - Statistics: statistics.md
+  - Reproducibility: reproducibility.md
+  - Limitations: limitations.md
+  - Tutorials:
+      - Stable system: tutorials/01_stable.md
+      - Selection bias: tutorials/02_regression.md
+      - Public EEG: tutorials/03_eeg.md
+  - API reference: api/index.md
+extra_css:
+  - stylesheets/neon.css
