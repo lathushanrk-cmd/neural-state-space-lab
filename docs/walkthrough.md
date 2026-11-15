@@ -39,7 +39,7 @@ Only that the chosen model predicted a reduction in the chosen distance over the
 3. Open `src/nssl/dynamics.py` and point to the propagation logic.
 4. Show `assets/regression_to_mean_trap.png`. Explain why selecting an extreme value can create an apparent subsequent decrease.
 5. Open `tests/` and demonstrate that expected numerical behaviour and invalid inputs are checked.
-6. Explain that the public EEG example is not yet an independently reproduced empirical result.
+6. Explain that the public EEG example has been executed on public recordings for one participant, but does not establish a biological recovery effect or across-participant generalization.
 
 ## Likely questions
 
@@ -53,7 +53,7 @@ A specified model tests numerical behaviour against a known system. A fitted mod
 Reference drift, scaling, selection of extreme states, measurement noise and regression to the mean can all change distances without an active restorative mechanism.
 
 **What was actually verified?**  
-Tests, synthetic figures, code quality and the outcomes shown in the GitHub Actions history. The external PhysioNet study remains a proposed reproducible example until its download and output have been checked.
+Tests, synthetic figures, code quality and the outcomes shown in the GitHub Actions history. The optional PhysioNet analysis has been executed on actual recordings; inspect [the output and limitations](physionet_observational_result.md).
 
 **What would improve the project next?**  
 Run the EEG example, check the events and trial splits against the actual recording, report observational outputs and negative controls, and assess generalization on independent sessions or subjects.
