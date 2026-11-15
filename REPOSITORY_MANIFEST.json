@@ -1,0 +1,442 @@
+{
+  "project": "Neural State Space Lab",
+  "version": "0.9.0",
+  "note": "Computed from files available during manifest generation; excludes this manifest itself.",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "bytes": 254,
+      "sha256": "15fb798912239695e9ec42388427f16e91b601c48c45bb9a06a8da7475a10eaf"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/scientific_validation.md",
+      "bytes": 260,
+      "sha256": "cf6c521654e294bac53ae0ef8fc6d93b2445ed3d616d6fdb03c5c32fdcd55aa9"
+    },
+    {
+      "path": ".github/workflows/docs.yml",
+      "bytes": 326,
+      "sha256": "21e8b4d9d943025051a483702b5c9213c626a0be098513516ecea3ca3796d603"
+    },
+    {
+      "path": ".github/workflows/lint.yml",
+      "bytes": 331,
+      "sha256": "242e2c4e247afc493c3b03b985905bbcf789dfcc880f4b3e7428276db9a8bbcf"
+    },
+    {
+      "path": ".github/workflows/render-assets.yml",
+      "bytes": 1809,
+      "sha256": "efc5edce4ecf0ee7327f25bb5be000b607052377f8e1bb84204ed529cb428120"
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 674,
+      "sha256": "6199e6e587cf8df0f70ccd81ffcc0241a64a36bc941b62ebd60e90f4287db89f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 153,
+      "sha256": "c9411d21179ed66a089976e8db49500235a1b747424b29e54d3b8026d77e2b0b"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "bytes": 143,
+      "sha256": "113374109013b444d4d7275d8fa41e3d009ea9b434ba990dddba81071c8ed15a"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 876,
+      "sha256": "47a5fb4eea19d61fb8bb3db4bc03d5144d19343f94699578f40e5e5daa7e5805"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 286,
+      "sha256": "c7117a24d7e416ea4237c27b620e85e8193997461a8dadbd56622934a20c5a2d"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "bytes": 333,
+      "sha256": "5c21439ad73c688024803dd34739982b1cc8fe0dc8a5fa5022b982fdb9ebddd1"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 671,
+      "sha256": "c849e5b2a9edab74c68bb3de78402e45f5c77b8d64cd31d4d9e219f01ff266f5"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "sha256": "93ad2112e2adc06e0d4bcf53231847d2dece83c3d447704214147730cbf8d184"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10140,
+      "sha256": "91f01a7dd04e237a487fccb5d5b4a2bd807a66c1bb42b6e8a593321ff01c3605"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 1113,
+      "sha256": "89891a450a0fbf7423f96dc963d2498e9820b0c1d44e5f2a5c78da6c21e8705a"
+    },
+    {
+      "path": "VALIDATION_REPORT.md",
+      "bytes": 2343,
+      "sha256": "9700ff20d39a4fadfa7ac69d7306214d6e6507fecda02399ce9af8b06c082e71"
+    },
+    {
+      "path": "VALIDATION_TEST_OUTPUT.txt",
+      "bytes": 565,
+      "sha256": "aa780ec43d86729972d163f31aa6a79124d12ac29a773e5410c2e6521d27e460"
+    },
+    {
+      "path": "assets/hero_simulation.png",
+      "bytes": 205117,
+      "sha256": "24f6d2f9e9b75b91ca9c63a3b4711a598440a008e8ac005ebf1d6335d740ec81"
+    },
+    {
+      "path": "assets/hero_simulation.svg",
+      "bytes": 114182,
+      "sha256": "62138f1d5e3bc38e352212f6b9c49a7c64b428da0dbf0d4b362f0074cea107f5"
+    },
+    {
+      "path": "assets/phase_portraits.png",
+      "bytes": 65519,
+      "sha256": "82d880403fca8b63f55c3d02f41df9f53eafed43467fadcea101428ae75fde42"
+    },
+    {
+      "path": "assets/phase_portraits.svg",
+      "bytes": 49821,
+      "sha256": "b1cbb09e2e1c2c9ca8db85dd733d32aa892d594d64acf7d99ed8b0f7903be520"
+    },
+    {
+      "path": "assets/regression_to_mean_trap.png",
+      "bytes": 100415,
+      "sha256": "55fc0880a6dc4f922b4dbf5264267b0414ac2108f3a943d15ae2fa73f600eaca"
+    },
+    {
+      "path": "assets/regression_to_mean_trap.svg",
+      "bytes": 56449,
+      "sha256": "a167ba86bd156419001922fc318051a6770a3c2e1867ac3d4946d4feedecf012"
+    },
+    {
+      "path": "assets/simulation_results.json",
+      "bytes": 922,
+      "sha256": "698b8b188c5482f582417f64314db15ded7acd815640ae73e8ff649358a03684"
+    },
+    {
+      "path": "assets/two_condition_simulation.png",
+      "bytes": 140824,
+      "sha256": "d251f3b3f5d751ae0c51b73a5f3b60232fb7d9ef145244dbd91193e0793b5954"
+    },
+    {
+      "path": "assets/two_condition_simulation.svg",
+      "bytes": 83195,
+      "sha256": "8fef99d33baf8851872a8e9d55e1aa93930388c296a4b99b432d9ef72d705b28"
+    },
+    {
+      "path": "benchmarks/results.json",
+      "bytes": 915,
+      "sha256": "331a3f1e716f3f4a701e33eab4339e8b32c31ce5a2efb08cd8ec88ea748aea2d"
+    },
+    {
+      "path": "distribution/neural_state_space_lab-0.9.0-py3-none-any.whl",
+      "bytes": 23345,
+      "sha256": "c9727ee134921bcdd32e07747f8cb0970717dec5b96e208e7b14c73a54d47c18"
+    },
+    {
+      "path": "docs/api/index.md",
+      "bytes": 1033,
+      "sha256": "2f3b3050ac35076aada15c8a815a593091f7df710737c9a5a11944417465913f"
+    },
+    {
+      "path": "docs/concepts.md",
+      "bytes": 1084,
+      "sha256": "4f02dcf741aca0bb56af707440512cffcaab77d95f2ae9cf256d3606674e92ea"
+    },
+    {
+      "path": "docs/data.md",
+      "bytes": 860,
+      "sha256": "d8f8ea9dd512fc96cfe0a12e6f0a3b218f67276c56413986bc326cfc92fc907c"
+    },
+    {
+      "path": "docs/dynamics.md",
+      "bytes": 1107,
+      "sha256": "40e3d44072c2a6fc3b1788729c767ce4f1bb440bcfcd2064892c540f8f0a23a8"
+    },
+    {
+      "path": "docs/experimental_design.md",
+      "bytes": 975,
+      "sha256": "7e194a74a9ca4d9f4ab5fa641ab0467974b8a56f8644bc473cf77b8bc7b2dcb0"
+    },
+    {
+      "path": "docs/index.md",
+      "bytes": 782,
+      "sha256": "7ea175b9e7ce625fe43faf6468f5bb27109b18e0adb6a1a7b09ae49cab9781ca"
+    },
+    {
+      "path": "docs/limitations.md",
+      "bytes": 1102,
+      "sha256": "aaf89f1967efc87a4654dbdbbafeb3f921995659067eced391cd8369a636ec71"
+    },
+    {
+      "path": "docs/metrics.md",
+      "bytes": 887,
+      "sha256": "ad6c41ba8f9361a35e2b8c31862d4ba03e72a13809ca36f7151c7bb7f7c80d0e"
+    },
+    {
+      "path": "docs/null_models.md",
+      "bytes": 844,
+      "sha256": "beb1e1f8cdf4fd631320fec3fe109156e047e0cfcaa767b4d944ec9c1ecd66e1"
+    },
+    {
+      "path": "docs/perturbations.md",
+      "bytes": 778,
+      "sha256": "321d035b60858655aaf7a43906cc998b682bb6e7c438255fb65f82b4eaaf97a7"
+    },
+    {
+      "path": "docs/reproducibility.md",
+      "bytes": 924,
+      "sha256": "f3cf7bacbff56017b06f0c8d85386b41bd898bd31d35517bfd07862cda785e06"
+    },
+    {
+      "path": "docs/scientific_assumptions.md",
+      "bytes": 946,
+      "sha256": "0792ca6f0e24ae960cd8374fd1632bf8f09149337266969286c8f41d9945d411"
+    },
+    {
+      "path": "docs/statistics.md",
+      "bytes": 770,
+      "sha256": "8699479628e3e9f4c7ac9f4a7389b078a18e0a344a6d9c416f56eac7197d0d5a"
+    },
+    {
+      "path": "docs/stylesheets/neon.css",
+      "bytes": 530,
+      "sha256": "fb98427be081530e04aff6e612aef84e115e934cec78cb9f2a41606e0f79c6ec"
+    },
+    {
+      "path": "docs/tutorials/01_stable.md",
+      "bytes": 757,
+      "sha256": "5e548d899aa77920c099d93488b05c40b4d6001c94e812ccdc15018f5c4093fc"
+    },
+    {
+      "path": "docs/tutorials/02_regression.md",
+      "bytes": 532,
+      "sha256": "90eb78136e79f8dd47fdf056d7ed7e745b16f1bc4ff3494f2ee6fb42b72f5df9"
+    },
+    {
+      "path": "docs/tutorials/03_eeg.md",
+      "bytes": 839,
+      "sha256": "94576c14eeca99d6d0ed8058ebf9a72f1e6d13edf0cfb23285ae673eb3716659"
+    },
+    {
+      "path": "examples/01_simulated_stable_system.ipynb",
+      "bytes": 1769,
+      "sha256": "170b24eba27df6e116012270d9def666938be36e9be437fcabc19d4ca1fa93da"
+    },
+    {
+      "path": "examples/02_regression_to_mean_null.ipynb",
+      "bytes": 1559,
+      "sha256": "7cf2ea8dc578104f1e4c417942768cf640739a57fd1e1311ffd19020f7f78563"
+    },
+    {
+      "path": "examples/03_eeg_demo.ipynb",
+      "bytes": 1184,
+      "sha256": "a5feee83ffe4a871c804826c15082ed47e42328930f7836f1ef08ae4ebddab55"
+    },
+    {
+      "path": "mkdocs.yml",
+      "bytes": 834,
+      "sha256": "70e925c71c01cc99e79438d1671d8cf2adf3d94a65739bd700d2fe7a358ff84b"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1089,
+      "sha256": "e359451df9f6712480f249932d209aaf85af312c3115a49799d23f5747ab45b1"
+    },
+    {
+      "path": "reproduce/benchmark.py",
+      "bytes": 1429,
+      "sha256": "67eb73c758f5ab4eec7c97a4227acce3f3b9c7408e2c01ab4419586415fa626c"
+    },
+    {
+      "path": "reproduce/eegbci_demo.py",
+      "bytes": 4055,
+      "sha256": "32956aaf00c736baa6a548f748f30449bc1d13efbfe5ea66c7a33b07f06a2e07"
+    },
+    {
+      "path": "reproduce/figure_1.py",
+      "bytes": 167,
+      "sha256": "40e46cf4624f38b4a11ee66d3fe6f3fc02901475de2d42193aa96ca95fd71116"
+    },
+    {
+      "path": "reproduce/figure_2.py",
+      "bytes": 178,
+      "sha256": "862ba65147d299ea889993583ebf61a15a6e5366b9129441e75deaf344e4d37d"
+    },
+    {
+      "path": "reproduce/repository_manifest.py",
+      "bytes": 1346,
+      "sha256": "1537f0ccc7ccc5634b5cc349414dd220ef5542945988c91263c16b5e19b6f9f1"
+    },
+    {
+      "path": "src/neural_state_space_lab.egg-info/SOURCES.txt",
+      "bytes": 932,
+      "sha256": "f5ceeebdb617e847f3e99f32d530b506dae7587b172f1ce35200beab71718843"
+    },
+    {
+      "path": "src/neural_state_space_lab.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "src/neural_state_space_lab.egg-info/entry_points.txt",
+      "bytes": 44,
+      "sha256": "588c5e9b00d5b597f64a1bb9e335660dd51216d7551f1034b1f2335110e76acd"
+    },
+    {
+      "path": "src/neural_state_space_lab.egg-info/requires.txt",
+      "bytes": 165,
+      "sha256": "c4295c3a40a6b30796eba183dd9a4bcc469d1e4a2db441d04ddbccc8081462b8"
+    },
+    {
+      "path": "src/neural_state_space_lab.egg-info/top_level.txt",
+      "bytes": 5,
+      "sha256": "ec972082167fb04aa8c189c3d46f39d05f9d5037ec3216555a56a088653f4a10"
+    },
+    {
+      "path": "src/nssl/__init__.py",
+      "bytes": 714,
+      "sha256": "401dbc22988f06e11e6dc68f5f648d968290b9ae2f88d0bf2da67ebcde708fa1"
+    },
+    {
+      "path": "src/nssl/cli.py",
+      "bytes": 621,
+      "sha256": "990933b3ee7e7088da440d4be0cfbe77de2d9051a70c1f0d3ef3020b7c843327"
+    },
+    {
+      "path": "src/nssl/demo.py",
+      "bytes": 6664,
+      "sha256": "0645185dde9eca7bd5f80f5fcdcce14265d73a45e310041e269b9b673b9dae3b"
+    },
+    {
+      "path": "src/nssl/dynamics.py",
+      "bytes": 4094,
+      "sha256": "2e45d6e5213ffe902ea7f204147a3699e77f72388de66acb3164008a4f830bd4"
+    },
+    {
+      "path": "src/nssl/embedding.py",
+      "bytes": 2406,
+      "sha256": "1f49b6ecc51516f4d009450092009922cb7699bf0bab87dc1f6a22fba82da0bc"
+    },
+    {
+      "path": "src/nssl/io.py",
+      "bytes": 3406,
+      "sha256": "71eabb9ce506490dfe597cb051fe762a0c0c3aac3728716b1e59b6418ad36088"
+    },
+    {
+      "path": "src/nssl/metrics.py",
+      "bytes": 2878,
+      "sha256": "a008a28e8d15272757c5c9140876951f1936e3d79d26ee364140f8a42405b277"
+    },
+    {
+      "path": "src/nssl/nulls.py",
+      "bytes": 2517,
+      "sha256": "d1f8ecc4ddce81dc6e51feeb5c0873b20baca54235720478a2340dfa86ea6c17"
+    },
+    {
+      "path": "src/nssl/perturb.py",
+      "bytes": 4408,
+      "sha256": "b812aa3b973d5c394bda19b1da62da56e6e1814c7daa3f1bc4157be3df5fc215"
+    },
+    {
+      "path": "src/nssl/plotting.py",
+      "bytes": 974,
+      "sha256": "365fe5655c6d76888bcc6a073b677ae60f9bed843ce5bf3a399df5d4cfef78d9"
+    },
+    {
+      "path": "src/nssl/preprocessing.py",
+      "bytes": 1208,
+      "sha256": "36c4044cb5e943d7e42f8d6d9173ff13d6cc79786e94911e9eee3b0d9a8c9732"
+    },
+    {
+      "path": "src/nssl/references.py",
+      "bytes": 1642,
+      "sha256": "711d743a40e7a09691a5ab9b10422435c0dfb66d722c4e87f2e04e6ec8b51918"
+    },
+    {
+      "path": "src/nssl/simulation.py",
+      "bytes": 2976,
+      "sha256": "700a414ce63603bba1eac0f2a94f290e4e42d831fe4e7d040e4858aac88a11d1"
+    },
+    {
+      "path": "src/nssl/statistics.py",
+      "bytes": 1998,
+      "sha256": "dbdd6a82ec98e6dbf372fd137f0981b99c02bbd7f15cc2901eb451c8f52629d7"
+    },
+    {
+      "path": "src/nssl/trajectories.py",
+      "bytes": 634,
+      "sha256": "994023b8d3ce70452980d17f9d6426e3732889996ee340d6bc8c04e45b9a8b3f"
+    },
+    {
+      "path": "src/nssl/validation.py",
+      "bytes": 972,
+      "sha256": "1aff99db3a0864c18a5fc037913d1cefa6e927cbad24507704b5e2e37943ae0b"
+    },
+    {
+      "path": "tests/test_additional_edges.py",
+      "bytes": 3042,
+      "sha256": "4ce8a61d749be3de59c4798871d19f494cf8c038ddec188c7553f5557fb8d137"
+    },
+    {
+      "path": "tests/test_demo.py",
+      "bytes": 623,
+      "sha256": "3cc1427d0ae617636e756f4dfbc7bb5f9f8a92c7a152b24c5dbbf5e10c9341bb"
+    },
+    {
+      "path": "tests/test_eeg_event_mapping.py",
+      "bytes": 1850,
+      "sha256": "5fede98474cef4677c9ed66d032dbf8bb44626d198c0be41d1e333532ed34045"
+    },
+    {
+      "path": "tests/test_embedding.py",
+      "bytes": 1402,
+      "sha256": "85e0570fa2c68a2d76f065dc2e1b4d4432e8f0b69d9ab7e31abbd3895f735a49"
+    },
+    {
+      "path": "tests/test_io.py",
+      "bytes": 956,
+      "sha256": "4c8add66417e7573248e1771765ee0fc40a5054fb676b5eca7f78f0645dbf850"
+    },
+    {
+      "path": "tests/test_metrics.py",
+      "bytes": 1201,
+      "sha256": "f6082545a2c05125582b52e4c0d27ea76afbe2891d3fb9567607bde62eee24a1"
+    },
+    {
+      "path": "tests/test_nulls.py",
+      "bytes": 1009,
+      "sha256": "062dfdeffc4efc11552e23b326d7bd827c8301845bf2a05a3d2720509b0fb0ee"
+    },
+    {
+      "path": "tests/test_perturb.py",
+      "bytes": 1440,
+      "sha256": "a0b6ceb67596a2fe0b90826a72718033dcaa7a2f5087418ab85f2d07d0310ffb"
+    },
+    {
+      "path": "tests/test_simulation.py",
+      "bytes": 1497,
+      "sha256": "a77b682aec9ace2189d78f33c1850e5c97b410336154a98e0213af8f144a9db9"
+    },
+    {
+      "path": "tests/test_statistics.py",
+      "bytes": 654,
+      "sha256": "2c6140a43b07a1ea2e129aa2aad6c09152c94a0578b165deeb02e8e24955cdcf"
+    },
+    {
+      "path": "tests/test_trajectories.py",
+      "bytes": 309,
+      "sha256": "5772d31adce0eedba1f63c378768ff36c73eb50c6405d59ace6cd0a8909ecde9"
+    }
+  ]
+}
