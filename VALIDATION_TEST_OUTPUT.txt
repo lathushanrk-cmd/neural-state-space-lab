@@ -1,0 +1,14 @@
+Local archive validation summary
+================================
+pytest: 39 passed
+compileall: succeeded
+synthetic CLI: 4 PNG, 4 SVG and simulation_results.json
+figure_1 and figure_2: executed
+synthetic notebook code: executed
+built wheel: neural_state_space_lab-0.9.0-py3-none-any.whl
+wheel install/import: succeeded in existing Linux environment
+
+These results refer to local archive tests. The published GitHub repository
+and remote CI must be checked separately.
+External EEG, native Windows, and biological validation: NOT VERIFIED.
+See VALIDATION_REPORT.md.
