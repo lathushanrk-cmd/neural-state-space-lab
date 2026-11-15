@@ -29,7 +29,7 @@ Selecting a state because it is unusually far from a reference changes the expec
 - Fitted dynamics extrapolate; forecasts are not observations.
 - The reference trajectory and observation window affect recovery metrics.
 - Permutation and bootstrap validity depends on how recordings were sampled.
-- The optional PhysioNet script has not been verified on downloaded recordings in this release.
+- The optional PhysioNet script was subsequently executed on downloaded subject 1 recordings, producing a verified observational figure. This remains a within-participant descriptive demonstration, not an experiment on biological recovery.
 
 ## Evidence and reproduction
 
