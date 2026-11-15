@@ -33,9 +33,9 @@ Selecting a state because it is unusually far from a reference changes the expec
 
 ## Evidence and reproduction
 
-- [Source implementation](../src/nssl/) and [tests](../tests/) are the primary record of what the package does.
+- [Source implementation](https://github.com/lathushanrk-cmd/neural-state-space-lab/tree/main/src/nssl) and [tests](https://github.com/lathushanrk-cmd/neural-state-space-lab/tree/main/tests) are the primary record of what the package does.
 - [Reproducibility instructions](reproducibility.md) explain how to run the examples.
-- [Validation record](../VALIDATION_REPORT.md) separates local/hosted checks from unverified biological work.
+- [Validation record](https://github.com/lathushanrk-cmd/neural-state-space-lab/blob/main/VALIDATION_REPORT.md) separates local/hosted checks from unverified biological work.
 - [GitHub Actions](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions) documents actual automated runs.
 
 These decisions may be challenged or revised as the toolkit is tested on real recordings.
