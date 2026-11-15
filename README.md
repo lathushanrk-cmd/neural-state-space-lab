@@ -195,9 +195,9 @@ Read [all limitations](docs/limitations.md) before making empirical claims.
 ## 13. Author
 
 **Lathushan RK**  
-Department of Life Sciences, NSBM Green University, Sri Lanka.
+Independent researcher
 
-Biomedical Science undergraduate with research interests in computational neuroscience, neural dynamics, brain-state representation and neurophysiology.
+Research interests: computational neuroscience, neural dynamics, brain-state representation and neurophysiology.
 
 ## 14. Citation, contribution and license
 
