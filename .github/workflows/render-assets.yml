@@ -34,5 +34,9 @@ jobs:
           git add assets/hero_simulation.png assets/hero_simulation.svg assets/phase_portraits.png assets/phase_portraits.svg assets/two_condition_simulation.png assets/two_condition_simulation.svg assets/regression_to_mean_trap.png assets/regression_to_mean_trap.svg assets/simulation_results.json
           if ! git diff --cached --quiet; then
             git commit -m "Add generated synthetic scientific visualizations [skip ci]"
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+            done
+            exit 1
           fi
