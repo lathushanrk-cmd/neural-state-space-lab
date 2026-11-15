@@ -1,14 +1,14 @@
 # Changelog
 
-## 0.9.0 — research pre-release candidate
+## 0.9.0 — research-software pre-release
 
-- Validated trial × feature × time arrays, MNE Epochs adapter and training-only preprocessing.
-- PCA/Factor Analysis, condition references and observational recovery metrics.
-- Four computational perturbation operators.
-- Explicit linear ODE simulation and ridge-fitted transition model with persistence comparison.
-- Stable, unstable, oscillatory, two-condition and regression-to-mean demonstrations.
-- Null transformations, bootstrapping, permutation statistics, tests and reproducible plots.
-- EEGBCI event handling now explicitly maps T1 and T2; offline synthetic tests added.
-- Clear separation of mathematical simulation from biological validation.
+- Added data and metadata validation, optional MNE Epochs input and training-only standardization.
+- Added PCA and Factor Analysis embeddings, condition references and trajectory metrics.
+- Implemented four computational displacement operators.
+- Added exact linear ODE propagation and a ridge-fitted transition model with held-out persistence comparison.
+- Included stable, unstable, oscillatory and two-condition simulations, plus a regression-to-the-mean control.
+- Included statistical null transformations, bootstrap intervals and numerical tests.
+- Added explicit cue mapping and offline MNE event-mapping tests for the optional EEGBCI script.
+- Added reproducible figures and automated GitHub tests, linting and documentation checks.
 
-Local archive tests reportedly passed (39 tests). Remote CI, native Windows and external EEG remain to be verified; no DOI or peer-reviewed validation claimed.
+The public README and method documentation were subsequently edited for clarity. These are documentation changes, not additional biological validation. See [the validation report](VALIDATION_REPORT.md) for current test evidence and unverified work.
