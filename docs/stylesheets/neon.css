@@ -1,0 +1,10 @@
+/* Styling only; no manipulation of research data. */
+:root { --nssl-bg:#080d1e; --nssl-cyan:#43e7fb; --nssl-pink:#ff5ecf; }
+body { background:var(--nssl-bg); color:#e8f3ff; }
+.md-header, .md-tabs { background:#101a33; }
+a, .md-typeset a { color:var(--nssl-cyan); }
+a:hover { color:var(--nssl-pink); }
+.md-content h1, .md-content h2 { color:var(--nssl-cyan); }
+.md-content code { background:#14213b; }
+.md-typeset table:not([class]) { border:1px solid #27375a; }
+.md-typeset blockquote { border-left:3px solid var(--nssl-pink); }
