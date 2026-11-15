@@ -1,9 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the repository."
+message: "If you use this research software, cite the repository version."
 title: "Neural State Space Lab"
-authors:
-  - family-names: "RK"
-    given-names: "Lathushan"
-version: "0.9.0"
 type: software
+authors:
+  - family-names: RK
+    given-names: Lathushan
+version: 0.9.0
+license: MIT
 repository-code: "https://github.com/lathushanrk-cmd/neural-state-space-lab"
+abstract: "Research software for controlled in-silico representational perturbations and descriptive recovery analysis of neural population trajectories."
