@@ -5,6 +5,7 @@ on:
     paths:
       - 'src/**'
       - 'pyproject.toml'
+      - 'docs/ORIGINAL_MASTER_GUIDE.md'
       - '.github/workflows/render-assets.yml'
   workflow_dispatch:
 permissions:
