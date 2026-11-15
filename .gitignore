@@ -13,3 +13,10 @@ outputs/
 site/
 .ipynb_checkpoints/
 .DS_Store
+
+# Local credentials and sensitive configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
