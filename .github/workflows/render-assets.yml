@@ -27,13 +27,21 @@ jobs:
         env:
           MPLBACKEND: Agg
         run: python -m nssl.cli --output assets
+      - name: Measure workflow-host benchmark
+        run: python reproduce/benchmark.py
+      - name: Build distributable wheel from repository source
+        run: |
+          python -m pip install build
+          python -m build --wheel --outdir distribution
+      - name: Write checksums for generated and existing files
+        run: python reproduce/repository_manifest.py
       - name: Commit reproducible figures to public repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/hero_simulation.png assets/hero_simulation.svg assets/phase_portraits.png assets/phase_portraits.svg assets/two_condition_simulation.png assets/two_condition_simulation.svg assets/regression_to_mean_trap.png assets/regression_to_mean_trap.svg assets/simulation_results.json
+          git add assets/ benchmarks/results.json distribution/ REPOSITORY_MANIFEST.json
           if ! git diff --cached --quiet; then
-            git commit -m "Add generated synthetic scientific visualizations [skip ci]"
+            git commit -m "Publish generated figures, benchmark, wheel and checksum manifest [skip ci]"
             for attempt in 1 2 3; do
               git pull --rebase origin main
               if git push origin HEAD:main; then exit 0; fi
