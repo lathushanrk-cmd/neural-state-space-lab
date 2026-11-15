@@ -1,5 +1,5 @@
 """OPTIONAL ONLINE REAL-DATA EXAMPLE. Downloads PhysioNet EEGBCI via MNE.
-No EEG files or results are bundled. Uses observational neural trajectories.
+No raw EEG files are bundled. A reproduced subject-1 observational figure and\nmetadata are archived under results/eegbci_subject1/.
 """
 from pathlib import Path
 import json
