@@ -104,7 +104,7 @@ python -m pip install -e ".[eeg]"
 python reproduce/eegbci_demo.py
 ```
 
-The external EEG example has **not been independently verified on downloaded recordings**. It is not a perturbation experiment, and its trial split cannot establish cross-participant generalization.
+The EEG example has now been **executed on downloaded public recordings** for PhysioNet subject 1 (runs 6, 10 and 14): 30 training and 15 held-out trials. View the [actual observational figure](results/eegbci_subject1/eeg_observational.png), [output metadata](results/eegbci_subject1/eeg_observational_metadata.json) and [reproduction report](docs/physionet_observational_result.md). This is a single-participant descriptive analysis, not a perturbation experiment, statistical group finding or evidence of cross-participant generalization.
 
 ## Testing and scientific scope
 
