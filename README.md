@@ -114,6 +114,8 @@ The [validation report](VALIDATION_REPORT.md) records the local checks and their
 
 In particular, latent coordinates depend on preprocessing, recovery estimates can be affected by reference choice and selection bias, and null tests must respect the dependence structure of the experiment. See [limitations](docs/limitations.md), [dynamics](docs/dynamics.md) and [experimental design](docs/experimental_design.md).
 
+For an explanation of the implementation decisions, see [implementation notes](docs/implementation_notes.md). A short [demonstration walkthrough](docs/walkthrough.md) shows how to reproduce and discuss the synthetic analyses.
+
 ## Repository contents
 
 - [`src/nssl/`](src/nssl/) — Python implementation
