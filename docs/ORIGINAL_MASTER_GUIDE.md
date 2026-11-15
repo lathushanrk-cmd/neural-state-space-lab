@@ -1,6 +1,6 @@
 # Neural State Space Lab — Original Master Guide (archival roadmap)
 
-> **Historical planning document, edited for clarity.** This is a preserved overview of the project requirements in the uploaded archive, not the authoritative current API documentation. Some original illustrative APIs and release milestones were aspirational rather than implemented. For functioning commands use the [README](../README.md), [API index](api/index.md), [validation record](../VALIDATION_REPORT.md), and actual Python source and tests.
+> **Historical planning document, edited for clarity.** This is a preserved overview of the project requirements in the uploaded archive, not the authoritative current API documentation. Some original illustrative APIs and release milestones were aspirational rather than implemented. For functioning commands use the [README](https://github.com/lathushanrk-cmd/neural-state-space-lab#readme), [API index](api/index.md), [validation record](https://github.com/lathushanrk-cmd/neural-state-space-lab/blob/main/VALIDATION_REPORT.md), and actual Python source and tests.
 
 ## 1. Identity
 
