@@ -1,0 +1,43 @@
+name: optional real EEGBCI reproduction
+on:
+  push:
+    paths:
+      - '.github/workflows/real-eeg-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce-eegbci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      MPLBACKEND: Agg
+      MNE_DATA: ${{ runner.temp }}/mne-data
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package and EEG requirements
+        run: python -m pip install -e ".[eeg]"
+      - name: Download public recordings and execute analysis
+        run: python reproduce/eegbci_demo.py
+      - name: Confirm observation results exist
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("outputs/eegbci")
+          figure=p/"eeg_observational.png"
+          meta=p/"eeg_observational_metadata.json"
+          assert figure.exists() and figure.stat().st_size > 1000
+          result=json.loads(meta.read_text())
+          assert result["test_trials"] > 0 and result["train_trials"] > 0
+          print(json.dumps(result,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eegbci-observational-artifacts
+          path: outputs/eegbci/
+          if-no-files-found: warn
