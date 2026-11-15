@@ -1,206 +1,131 @@
-<div align="center">
+# Neural State Space Lab
 
-# NEURAL STATE SPACE LAB
+**Research software for studying perturbation and recovery in low-dimensional neural state spaces**
 
-### An Open-Source Perturbation and Recovery Toolkit for Neural Population Dynamics
+[![Tests](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/tests.yml)
+[![Documentation](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/docs.yml/badge.svg)](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/docs.yml)
+[MIT license](LICENSE) · Python 3.10+ · Version 0.9.0
 
-**Explore neural trajectories · Change states in a mathematical model · Measure what happens next**
+![A synthetic population-signal example, two trajectories in a known linear system, and their separation over time](assets/hero_simulation.png)
 
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-0cdaf2) ![Status: research prototype](https://img.shields.io/badge/Status-Research%20prototype-8c78ed) ![License: MIT](https://img.shields.io/badge/License-MIT-0cdaf2)
+*Figure: simulated signals and trajectories propagated using a specified linear dynamical system. No experimental neural data are shown.*
 
-![Synthetic activity and model recovery](assets/hero_simulation.png)
+## Overview
 
-*This figure is generated from simulated signals and exact mathematical models. **Not an empirical EEG recording or biological finding.***
+Recordings from many neural channels can be treated as a sequence of population states. After dimensionality reduction, each state becomes a point in a smaller coordinate space, and the points across time form a trajectory.
 
-[Start here](START_HERE.md) · [Scientific concepts](docs/concepts.md) · [Limitations](docs/limitations.md) · [Source code](src/nssl/)
+Neural State Space Lab (NSSL) provides tools to examine how these trajectories relate to reference trajectories and how a **computationally displaced state** evolves under an explicitly chosen model. The aim is to make the assumptions behind perturbation-and-recovery analyses inspectable and reproducible.
 
-</div>
+There are three distinct uses:
 
-## 1. What is Neural State Space Lab?
+- **Observed trajectories:** describe distance and movement in recorded or simulated data.
+- **Known-system simulations:** perturb an initial state in a defined dynamical system and calculate its future trajectory.
+- **Fitted-model forecasts:** estimate a linear transition model from training data and examine hypothetical future trajectories, with predictive error assessed on held-out observations.
 
-The brain produces many interacting signals. A **neural state space** is a way of representing activity from many neurons or recording channels as a point moving through a mathematical space. As it moves, it traces a *trajectory*.
+A change to latent coordinates is not physical brain stimulation. Model-predicted recovery is not evidence, by itself, that the brain has an attractor.
 
-**Neural State Space Lab (NSSL)** is an open-source Python research toolkit for investigating those trajectories. It can organize recordings, make controlled changes to a modeled neural state, propagate that state using a clearly defined dynamical system, and measure its approach to or separation from a reference. This is research software, not a diagnostic application or physical brain stimulation technology.
+## Methods implemented
 
-## 2. What can the software do?
+| Component | Implementation |
+| --- | --- |
+| Data handling | Trial × feature × time arrays, metadata checks, optional MNE Epochs adapter |
+| Preprocessing | Channel standardization fitted on training recordings |
+| Embedding | PCA and Factor Analysis |
+| References | Condition-specific means and leave-one-out reference trajectories |
+| State changes | Random fixed-norm, directional, empirical-residual and trial-state-swap displacements |
+| Dynamics | Exact linear continuous-time propagation and ridge-fitted discrete transitions |
+| Descriptive measures | Reference distance, recovery fraction, recovery threshold time, separation and divergence |
+| Controls | Label permutations, time shifts, phase-randomized surrogates and a regression-to-the-mean demonstration |
+| Uncertainty | Bootstrap mean intervals and permutation probabilities |
 
-| Question | Available tool |
-|---|---|
-| How do I organize neural recordings? | Validated trials × channels/features × time arrays |
-| Can I simplify high-dimensional activity? | PCA or Factor Analysis fitted on training data |
-| What is a representative trajectory? | Training-condition and leave-one-out references |
-| How do I introduce a computational change? | Isotropic, directional, residual-based or state-swap displacement |
-| What happens after a changed state? | Exact linear ODE or training-fitted ridge transition model |
-| How can I measure recovery or divergence? | Distance, recovery fraction/time, separation, divergence and directional restoration |
-| Could an apparent effect be misleading? | Regression-to-the-mean example and assumption-dependent null transformations |
-| How can I describe uncertainty? | Bootstrap intervals and empirical permutation probabilities |
+The mathematical assumptions, units and statistical restrictions are described in [the documentation](docs/index.md).
 
-**Important:** Changing coordinates at one time point does not automatically generate a meaningful future trajectory. NSSL requires an explicit propagation model. Model forecasts are not real-world observed reactions.
+## Install and run
 
-## 3. How does it work?
+Clone this repository, open a terminal in its root folder, then install the package.
 
-```text
-Recorded neural signals or simulated data
-                  ↓
-          Validate data and labels
-                  ↓
-        Fit preprocessing on TRAINING data
-                  ↓
-          PCA / Factor Analysis
-                  ↓
-           State-space paths
-                  ↓
-       Define reference trajectory
-                  ↓
-      Change a state computationally
-                  ↓
-        Propagate it through a model
-                  ↓
-      Measure recovery or divergence
-                  ↓
-      Evaluate controls and assumptions
-                  ↓
-          Plot and interpret
+```bash
+python -m pip install -e ".[dev]"
+python -m pytest -q
+nssl-demo --output outputs/synthetic
 ```
 
-Read the [scientific assumptions](docs/scientific_assumptions.md) for the difference between observation, known-system simulation and model-dependent extrapolation.
-
-## 4. Scientific visualizations
-
-**Every figure here is created from seeded synthetic data or explicitly defined mathematical systems.** These are not experimental brain measurements.
-
-**Stable, unstable and oscillatory model trajectories**
-
-![Simulated phase portraits](assets/phase_portraits.png)
-
-**Two simulated conditions with different recovery rates**
-
-![Simulated two-condition trajectory recovery](assets/two_condition_simulation.png)
-
-**Why apparent recovery may be misleading**
-
-![Simulated stationary AR1 regression-to-the-mean control](assets/regression_to_mean_trap.png)
-
-The last figure shows how selecting unusually extreme measurements can produce later reductions even without a restorative mechanism.
-
-All plots are generated by [`src/nssl/demo.py`](src/nssl/demo.py), not manually invented results. If these assets are not present in a checkout, run `nssl-demo --output assets` after installation.
-
-## 5. Getting started
-
-**Windows PowerShell** (inside the cloned repository folder):
+For Windows PowerShell, a Python 3.11 virtual environment can be created with:
 
 ```powershell
 py -3.11 -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install -e ".[dev]"
-python -m pytest -q
-nssl-demo --output outputs/synthetic
 ```
 
-**macOS or Linux:**
+The demonstration writes figures and numerical results to `outputs/synthetic/`. It uses seeded synthetic inputs and does not download participant recordings.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -e ".[dev]"
-python -m pytest -q
-nssl-demo --output outputs/synthetic
-```
-
-The synthetic demonstration requires no participant data. Python 3.10 or newer is required. Clean Windows setup and public EEG download require separate verification.
-
-## 6. Run your first experiment
-
-Try this complete **synthetic** example:
+### Minimal example: perturb a known stable system
 
 ```python
 import numpy as np
 from nssl.dynamics import LinearContinuousDynamics
 from nssl.simulation import system_matrix
-from nssl.metrics import local_trajectory_separation, recovery_fraction
+from nssl.metrics import local_trajectory_separation
 
 times = np.linspace(0, 5, 201)
 initial = np.array([[1.0, 0.5]])
-changed = initial + np.array([[0.4, 0.0]])
+displaced = initial + np.array([[0.4, 0.0]])
 
 model = LinearContinuousDynamics(system_matrix("stable"))
-result = model.compare(initial, changed, times)
-distance = local_trajectory_separation(result.perturbed, result.baseline)
+result = model.compare(initial, displaced, times)
+separation = local_trajectory_separation(result.perturbed, result.baseline)
 
-print("Initial separation:", distance[0, 0])
-print("Final separation:", distance[0, -1])
-print("Recovery fraction:", recovery_fraction(distance)[0])
+print("Initial distance:", separation[0, 0])
+print("Final distance:", separation[0, -1])
 ```
 
-This uses a **specified linear dynamical system**, not a fitted brain model or recorded stimulation response.
+For this specified stable system, the two calculated trajectories approach one another. This example checks the behaviour of the numerical model, not a person's neural response.
 
-## 7. Understanding results
+## Two useful controls
 
-**Trajectory separation** is the distance between baseline and changed-state paths. The **recovery fraction** measures how much this distance decreases over a defined interval: positive values indicate a smaller final distance, zero means no change, and negative values indicate greater separation. These descriptive quantities do not prove an underlying biological attractor.
+**Stable and unstable dynamics.** The [phase portrait](assets/phase_portraits.png) shows trajectories in stable, unstable and damped oscillatory linear systems. The underlying matrices are specified in [`simulation.py`](src/nssl/simulation.py); the example provides a known mathematical answer against which to check the implementation.
 
-Interpretation requires the perturbation size, reference, observation window, model assumptions, independent sampling unit and suitable null controls. Explore [metrics](docs/metrics.md) and [null models](docs/null_models.md).
+**Selection effects.** The [regression-to-the-mean example](assets/regression_to_mean_trap.png) starts with stationary simulated noise. Selecting unusually large deviations creates an apparent subsequent decrease. This matters because a reduction in distance is not sufficient to infer active restoration.
 
-## 8. Scientific validation
+The figures are recreated by running:
 
-Local archive validation reported **39 passing tests**, synthetic demonstration execution, wheel build and imported installation, including offline tests of explicit MNE event mapping. These results **do not** establish native Windows execution, downloaded PhysioNet EEG results, remote CI status or biological validation. See the [validation report](VALIDATION_REPORT.md) and the repository [Actions](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions) tab for the actual remote status.
+```bash
+python reproduce/figure_1.py
+python reproduce/figure_2.py
+```
 
-## 9. Project structure
+## Working with neural recordings
 
-| Location | Contents |
-|---|---|
-| [`src/nssl/`](src/nssl/) | Installable Python research toolkit |
-| [`tests/`](tests/) | Mathematical, numerical and edge-case tests |
-| [`assets/`](assets/) | Seeded synthetic plots and numerical output |
-| [`reproduce/`](reproduce/) | Plot generation, benchmarking and optional EEGBCI example |
-| [`docs/`](docs/) | Scientific and statistical explanations |
-| [`examples/`](examples/) | Jupyter notebooks |
-| [`.github/workflows/`](.github/workflows/) | Automated checks and figure generation |
-
-## 10. Documentation and tutorials
-
-[Introduction](docs/index.md) · [Input data](docs/data.md) · [Perturbations](docs/perturbations.md) · [Dynamics](docs/dynamics.md) · [Statistics](docs/statistics.md) · [Experimental design](docs/experimental_design.md) · [Simulation tutorial](docs/tutorials/01_stable.md) · [Selection bias tutorial](docs/tutorials/02_regression.md) · [EEG tutorial](docs/tutorials/03_eeg.md).
-
-### Optional public EEG example
-
-The [EEGBCI demonstration](reproduce/eegbci_demo.py) is designed for a **single-participant observational analysis** of public [PhysioNet EEG Motor Movement/Imagery](https://physionet.org/content/eegmmidb/) data. It maps `T1` to hands (2) and `T2` to feet (3), excludes rest cues, and learns transformations only on training trials. It has **not been independently executed and verified against downloaded recordings**.
+The core package accepts appropriately structured feature arrays. An optional [EEGBCI example](reproduce/eegbci_demo.py) illustrates an observational workflow using public PhysioNet EEG Motor Movement/Imagery recordings, with training-only transformations and explicit cue mapping.
 
 ```bash
 python -m pip install -e ".[eeg]"
 python reproduce/eegbci_demo.py
 ```
 
-This trial split does not establish cross-participant or cross-session generalization.
+The external EEG example has **not been independently verified on downloaded recordings**. It is not a perturbation experiment, and its trial split cannot establish cross-participant generalization.
 
-## 11. Reproduce the figures
+## Testing and scientific scope
 
-```bash
-python -m pytest -q
-python reproduce/figure_1.py
-python reproduce/figure_2.py
-```
+The codebase includes unit tests of numerical behaviour, data validation, error handling, and synthetic event mapping. The [GitHub Actions workflows](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions) run tests across supported Python versions and operating systems, check documentation and linting, and verify synthetic figure generation. Check the workflow history for the result on a particular commit.
 
-Both plotting scripts regenerate the same seeded figures in `assets/`. Their numerical results are recorded in [`assets/simulation_results.json`](assets/simulation_results.json). Do not interpret synthetic plots as independent experimental neuroscience evidence.
+The [validation report](VALIDATION_REPORT.md) records the local checks and their scope. Software checks support reproducibility of the implementation; they do not validate the biological interpretation of a fitted dynamical model.
 
-## 12. Limitations
+In particular, latent coordinates depend on preprocessing, recovery estimates can be affected by reference choice and selection bias, and null tests must respect the dependence structure of the experiment. See [limitations](docs/limitations.md), [dynamics](docs/dynamics.md) and [experimental design](docs/experimental_design.md).
 
-- **In-silico** perturbation is not TMS, DBS or physical stimulation.
-- A trained transition-model rollout is a hypothetical forecast, not an observed causal response.
-- Distance to a changing reference can shrink without any neural attracting system.
-- Selecting extreme observations can introduce regression to the mean.
-- Statistical permutations and bootstraps require valid exchangeability and sampling assumptions.
-- NSSL is **not clinically validated** and cannot be used to diagnose or treat disease.
+## Repository contents
 
-Read [all limitations](docs/limitations.md) before making empirical claims.
+- [`src/nssl/`](src/nssl/) — Python implementation
+- [`tests/`](tests/) — known-answer and boundary-condition tests
+- [`examples/`](examples/) — notebooks
+- [`reproduce/`](reproduce/) — figure generation, benchmark and optional EEG example
+- [`docs/`](docs/) — concepts, methods, statistics and tutorials
+- [`assets/`](assets/) — generated synthetic figures and numerical record
 
-## 13. Author
+## Author and license
 
-**Lathushan RK**  
-Independent researcher
-
+**Lathushan RK** — Independent researcher  
 Research interests: computational neuroscience, neural dynamics, brain-state representation and neurophysiology.
 
-## 14. Citation, contribution and license
-
-Cite the specific repository version used. [`CITATION.cff`](CITATION.cff) provides software metadata; **no DOI or peer-reviewed validation is claimed**. Contributions are welcome under [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
-Released under the [MIT License](LICENSE). Current source version: **0.9.0 (research pre-release candidate)**.
+The code is distributed under the [MIT License](LICENSE). For citation details see [`CITATION.cff`](CITATION.cff); for proposed changes see [`CONTRIBUTING.md`](CONTRIBUTING.md). Version 0.9.0 is a research-software pre-release, not an independently biologically validated tool.
