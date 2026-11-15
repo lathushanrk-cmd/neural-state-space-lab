@@ -125,6 +125,10 @@ For an explanation of the implementation decisions, see [implementation notes](d
 - [`docs/`](docs/) — concepts, methods, statistics and tutorials
 - [`assets/`](assets/) — generated synthetic figures and numerical record
 
+## Development note
+
+Developed by Lathushan RK, including the research concept, scientific methodology, testing, and documentation. AI-assisted tools were used for technical support during software implementation, debugging, and refinement.
+
 ## Author and license
 
 **Lathushan RK** — Independent researcher  
