@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/real-eeg-validation.yml'
+      - 'reproduce/eegbci_demo.py'
   workflow_dispatch:
 permissions:
   contents: read
