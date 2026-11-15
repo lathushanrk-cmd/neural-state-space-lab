@@ -1,6 +1,6 @@
 # Neural State Space Lab
 
-NSSL is an open-source Python research-software toolkit for simulated and observational neural population state spaces. Start at [the README](../README.md), [concepts](concepts.md), [dynamics](dynamics.md), and [limitations](limitations.md).
+NSSL is an open-source Python research-software toolkit for simulated and observational neural population state spaces. Start at [the README](https://github.com/lathushanrk-cmd/neural-state-space-lab#readme), [concepts](concepts.md), [dynamics](dynamics.md), and [limitations](limitations.md).
 
 ## Three experimental modes
 
