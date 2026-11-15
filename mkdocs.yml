@@ -7,6 +7,9 @@ nav:
   - Concepts: concepts.md
   - Scientific design: scientific_assumptions.md
   - Experiment design: experimental_design.md
+  - Implementation notes: implementation_notes.md
+  - Demonstration walkthrough: walkthrough.md
+  - Verified public EEG example: physionet_observational_result.md
   - Data: data.md
   - Perturbations: perturbations.md
   - Dynamics: dynamics.md
