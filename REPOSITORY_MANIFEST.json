@@ -25,8 +25,8 @@
     },
     {
       "path": ".github/workflows/render-assets.yml",
-      "bytes": 1809,
-      "sha256": "efc5edce4ecf0ee7327f25bb5be000b607052377f8e1bb84204ed529cb428120"
+      "bytes": 1849,
+      "sha256": "8b64170c19521694b7136fa90b5fd4a4722a83c746ab0437e7fb8ef26973425d"
     },
     {
       "path": ".github/workflows/tests.yml",
@@ -35,8 +35,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 153,
-      "sha256": "c9411d21179ed66a089976e8db49500235a1b747424b29e54d3b8026d77e2b0b"
+      "bytes": 240,
+      "sha256": "d671b1174fda27b0a09307d9b9bbc8b70b3548444d1b104424d3920ffa178933"
     },
     {
       "path": ".pre-commit-config.yaml",
@@ -50,8 +50,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 286,
-      "sha256": "c7117a24d7e416ea4237c27b620e85e8193997461a8dadbd56622934a20c5a2d"
+      "bytes": 458,
+      "sha256": "9441d2e43eaf0d8ca63a02959dbce7562c3b57ede911d02a91ecab7e6cf3aeec"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -70,8 +70,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10140,
-      "sha256": "91f01a7dd04e237a487fccb5d5b4a2bd807a66c1bb42b6e8a593321ff01c3605"
+      "bytes": 10192,
+      "sha256": "d94cabf513471d196c08b05f6d19b31d1660467b85a2c7e817837e2f36e2ff4e"
     },
     {
       "path": "START_HERE.md",
@@ -96,7 +96,7 @@
     {
       "path": "assets/hero_simulation.svg",
       "bytes": 114182,
-      "sha256": "62138f1d5e3bc38e352212f6b9c49a7c64b428da0dbf0d4b362f0074cea107f5"
+      "sha256": "234c5c4ea5aa48c61d7a7fa23e7dab499239696489f27f63bcc52713c98a0180"
     },
     {
       "path": "assets/phase_portraits.png",
@@ -106,7 +106,7 @@
     {
       "path": "assets/phase_portraits.svg",
       "bytes": 49821,
-      "sha256": "b1cbb09e2e1c2c9ca8db85dd733d32aa892d594d64acf7d99ed8b0f7903be520"
+      "sha256": "4469d34cfc4f4f98420a092f4d8db0017cf66659a3fadb8076442ef6f92913d6"
     },
     {
       "path": "assets/regression_to_mean_trap.png",
@@ -116,7 +116,7 @@
     {
       "path": "assets/regression_to_mean_trap.svg",
       "bytes": 56449,
-      "sha256": "a167ba86bd156419001922fc318051a6770a3c2e1867ac3d4946d4feedecf012"
+      "sha256": "a0cc13b9daa8816de62f44d58cb2e650940c83b598b7592d650eb17648c5874a"
     },
     {
       "path": "assets/simulation_results.json",
@@ -131,17 +131,22 @@
     {
       "path": "assets/two_condition_simulation.svg",
       "bytes": 83195,
-      "sha256": "8fef99d33baf8851872a8e9d55e1aa93930388c296a4b99b432d9ef72d705b28"
+      "sha256": "3ed72d18877c5606fbe3989bd6612b12f453e53fc5fbc45648ab95503e49b295"
     },
     {
       "path": "benchmarks/results.json",
-      "bytes": 915,
-      "sha256": "331a3f1e716f3f4a701e33eab4339e8b32c31ce5a2efb08cd8ec88ea748aea2d"
+      "bytes": 913,
+      "sha256": "4f0e7a051f9bdda3df01ee0b1dc382d63107951746869ab4d441f457bb682db9"
     },
     {
       "path": "distribution/neural_state_space_lab-0.9.0-py3-none-any.whl",
-      "bytes": 23345,
-      "sha256": "c9727ee134921bcdd32e07747f8cb0970717dec5b96e208e7b14c73a54d47c18"
+      "bytes": 23364,
+      "sha256": "449489af7f790b0848142520512c41fe75d0a5169628d95619cf833eada2e89d"
+    },
+    {
+      "path": "docs/ORIGINAL_MASTER_GUIDE.md",
+      "bytes": 10090,
+      "sha256": "fd7974048bf973dbad0abbd7d8e0a5761c0b0a1c31020fb41079dfa17aaec516"
     },
     {
       "path": "docs/api/index.md",

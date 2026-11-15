@@ -5,30 +5,30 @@
     {
       "trials": 10,
       "features": 10,
-      "fit_seconds": 0.006051452000001234,
-      "perturb_seconds": 0.00024144300000017438,
-      "peak_traced_bytes": 221367
+      "fit_seconds": 0.006181720999997253,
+      "perturb_seconds": 0.0002538029999996638,
+      "peak_traced_bytes": 221152
     },
     {
       "trials": 30,
       "features": 20,
-      "fit_seconds": 0.0015694030000048542,
-      "perturb_seconds": 0.00018940500000041993,
+      "fit_seconds": 0.0015946640000024104,
+      "perturb_seconds": 0.00019990100000200073,
       "peak_traced_bytes": 694674
     },
     {
       "trials": 60,
       "features": 40,
-      "fit_seconds": 0.0038031579999966425,
-      "perturb_seconds": 0.0002950930000054086,
+      "fit_seconds": 0.004032430000002307,
+      "perturb_seconds": 0.0003848400000023844,
       "peak_traced_bytes": 2279698
     },
     {
       "trials": 120,
       "features": 40,
-      "fit_seconds": 0.006990207000001192,
-      "perturb_seconds": 0.0003613390000012373,
-      "peak_traced_bytes": 4487682
+      "fit_seconds": 0.006869598000001531,
+      "perturb_seconds": 0.0003363069999977597,
+      "peak_traced_bytes": 4487628
     }
   ],
   "note": "measured locally; tracemalloc does not capture all native allocations"
