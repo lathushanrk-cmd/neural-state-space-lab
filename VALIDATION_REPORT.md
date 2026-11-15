@@ -29,9 +29,16 @@ The [Actions history](https://github.com/lathushanrk-cmd/neural-state-space-lab/
 - An in-silico state displacement is not an observed response to physical neural stimulation.
 - A decreasing reference distance does not establish a biological attractor or restorative mechanism.
 
+## Executed public EEG example
+
+On 15 November 2026, the optional PhysioNet EEGBCI script ran successfully on GitHub Actions using actual downloaded recordings for subject 1, runs 6, 10 and 14. The output reported **30 training trials** and **15 held-out trials** and generated a descriptive figure of distance to training-condition reference trajectories. Both image and metadata were verified and archived in the repository.
+
+See [public EEG demonstration](docs/physionet_observational_result.md), [recorded figure](results/eegbci_subject1/eeg_observational.png) and [successful workflow](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/runs/43742073456).
+
+This is **single-participant observational analysis**, not an intervention, proof of biological restoration, between-condition inferential finding or cross-participant replication.
+
 ## Not independently verified
 
-- Execution of the optional PhysioNet EEGBCI example against downloaded recordings.
 - Cross-participant generalization on experimental neuroscience datasets.
 - Independent biological or clinical validation.
 - Distribution on PyPI, a registered DOI or peer-reviewed scientific publication.
@@ -48,4 +55,4 @@ python reproduce/figure_1.py
 python reproduce/figure_2.py
 ```
 
-The optional external-data script is `reproduce/eegbci_demo.py` (requires `.[eeg]`). Report its results only after actually executing and checking the analysis.
+The optional external-data script is `reproduce/eegbci_demo.py` (requires `.[eeg]`). Results have been executed and checked for the specific subject and runs described above; additional datasets require separate verification.
