@@ -1,0 +1,28 @@
+{
+  "source": "exact known-system ODE and seeded synthetic processes",
+  "seed": 42,
+  "known_system_checks": {
+    "stable": {
+      "initial_separation": 0.3999999999999999,
+      "final_separation": 0.003291898819608008,
+      "expected": "decay"
+    },
+    "unstable": {
+      "initial_separation": 0.3999999999999999,
+      "final_separation": 48.604167007493984,
+      "expected": "growth"
+    },
+    "oscillatory": {
+      "initial_separation": 0.3999999999999999,
+      "final_separation": 0.0032918988196079715,
+      "expected": "decay"
+    }
+  },
+  "stable_initial_separation": 0.65,
+  "stable_final_separation": 0.011006841477780414,
+  "unstable_initial_separation": 0.65,
+  "unstable_final_separation": 32.758890339897604,
+  "regression_to_mean_selected_trials": 60,
+  "regression_to_mean_average_naive_fraction": 0.42689153654425005,
+  "interpretation": "numerical demonstration only; no biological result"
+}
