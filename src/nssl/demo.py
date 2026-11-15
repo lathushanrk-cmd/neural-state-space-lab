@@ -7,7 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from .dynamics import LinearContinuousDynamics
 from .simulation import system_matrix, simulate_two_conditions, regression_to_mean_trap
-from .statistics import bootstrap_mean_ci
 from .plotting import neon_style, finish_axis, BG, FG, GRID, CYAN, PINK, LIME
 from .validation import validate_known_systems
 
@@ -34,7 +33,9 @@ def generate(output):
         fig = plt.figure(figsize=(15.6, 5.2), layout="constrained")
         fig.suptitle("NEURAL STATE SPACE LAB   /   CONTROLLED PERTURBATION ENGINE", fontsize=20, weight="bold", color=FG)
         gs = fig.add_gridspec(1, 3, wspace=.28)
-        a = fig.add_subplot(gs[0, 0]); b = fig.add_subplot(gs[0, 1]); c = fig.add_subplot(gs[0, 2])
+        a = fig.add_subplot(gs[0, 0])
+        b = fig.add_subplot(gs[0, 1])
+        c = fig.add_subplot(gs[0, 2])
         a.imshow(recordings, aspect="auto", origin="lower", extent=[0,5,0,16], cmap="cool", interpolation="none")
         finish_axis(a, "01  /  Population signals", "Time (a.u.)", "Simulated channels")
         base, per = roll_stable.baseline[0], roll_stable.perturbed[0]
