@@ -8,7 +8,13 @@
 
 <p align="center"><sub>Research software · v0.9.0 · Python 3.10+ · MIT License</sub></p>
 
-<p align="center">[Overview](#overview) · [Methods](#methods-implemented) · [Run locally](#install-and-run) · [Real EEG example](#working-with-neural-recordings) · [Limitations](#testing-and-scientific-scope)</p>
+<p align="center">
+  <a href="#overview">Overview</a> &nbsp;·&nbsp;
+  <a href="#methods-implemented">Methods</a> &nbsp;·&nbsp;
+  <a href="#install-and-run">Run locally</a> &nbsp;·&nbsp;
+  <a href="#working-with-neural-recordings">Real EEG example</a> &nbsp;·&nbsp;
+  <a href="#testing-and-scientific-scope">Limitations</a>
+</p>
 
 ---
 
@@ -16,9 +22,6 @@
 
 [![Tests](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/tests.yml)
 [![Documentation](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/docs.yml/badge.svg)](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/docs.yml)
-[MIT license](LICENSE) · Python 3.10+ · Version 0.9.0
-
-
 Recordings from many neural channels can be treated as a sequence of population states. After dimensionality reduction, each state becomes a point in a smaller coordinate space, and the points across time form a trajectory.
 
 Neural State Space Lab (NSSL) provides tools to examine how these trajectories relate to reference trajectories and how a **computationally displaced state** evolves under an explicitly chosen model. The aim is to make the assumptions behind perturbation-and-recovery analyses inspectable and reproducible.
@@ -115,7 +118,7 @@ python -m pip install -e ".[eeg]"
 python reproduce/eegbci_demo.py
 ```
 
-The EEG example has now been **executed on downloaded public recordings** for PhysioNet subject 1 (runs 6, 10 and 14): 30 training and 15 held-out trials. View the [actual observational figure](results/eegbci_subject1/eeg_observational.png), [output metadata](results/eegbci_subject1/eeg_observational_metadata.json) and [reproduction report](docs/physionet_observational_result.md). This is a single-participant descriptive analysis, not a perturbation experiment, statistical group finding or evidence of cross-participant generalization.
+The EEG example was **executed on downloaded public recordings** for PhysioNet subject 1 (runs 6, 10 and 14): 30 training and 15 held-out trials. View the [actual observational figure](results/eegbci_subject1/eeg_observational.png), [output metadata](results/eegbci_subject1/eeg_observational_metadata.json) and [reproduction report](docs/physionet_observational_result.md). This is a single-participant descriptive analysis, not a perturbation experiment, statistical group finding or evidence of cross-participant generalization.
 
 
 ### Example from public EEG recordings
