@@ -1,16 +1,23 @@
-# Neural State Space Lab
+<p align="center">
+  <img src="assets/readme_banner.svg" alt="Original conceptual banner for Neural State Space Lab; not experimental data" width="100%" />
+</p>
 
-**Research software for studying perturbation and recovery in low-dimensional neural state spaces**
+<h1 align="center">Neural State Space Lab</h1>
+
+<p align="center"><strong>Python research software for describing neural trajectories and testing specified dynamical models.</strong></p>
+
+<p align="center"><sub>Research software · v0.9.0 · Python 3.10+ · MIT License</sub></p>
+
+<p align="center">[Overview](#overview) · [Methods](#methods-implemented) · [Run locally](#install-and-run) · [Real EEG example](#working-with-neural-recordings) · [Limitations](#testing-and-scientific-scope)</p>
+
+---
+
+## Overview
 
 [![Tests](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/tests.yml)
 [![Documentation](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/docs.yml/badge.svg)](https://github.com/lathushanrk-cmd/neural-state-space-lab/actions/workflows/docs.yml)
 [MIT license](LICENSE) · Python 3.10+ · Version 0.9.0
 
-![A synthetic population-signal example, two trajectories in a known linear system, and their separation over time](assets/hero_simulation.png)
-
-*Figure: simulated signals and trajectories propagated using a specified linear dynamical system. No experimental neural data are shown.*
-
-## Overview
 
 Recordings from many neural channels can be treated as a sequence of population states. After dimensionality reduction, each state becomes a point in a smaller coordinate space, and the points across time form a trajectory.
 
@@ -23,6 +30,10 @@ There are three distinct uses:
 - **Fitted-model forecasts:** estimate a linear transition model from training data and examine hypothetical future trajectories, with predictive error assessed on held-out observations.
 
 A change to latent coordinates is not physical brain stimulation. Model-predicted recovery is not evidence, by itself, that the brain has an attractor.
+
+![A synthetic population-signal example, two trajectories in a known linear system, and their separation over time](assets/hero_simulation.png)
+
+*Figure: simulated signals and trajectories propagated using a specified linear dynamical system. No experimental neural data are shown.*
 
 ## Methods implemented
 
@@ -105,6 +116,13 @@ python reproduce/eegbci_demo.py
 ```
 
 The EEG example has now been **executed on downloaded public recordings** for PhysioNet subject 1 (runs 6, 10 and 14): 30 training and 15 held-out trials. View the [actual observational figure](results/eegbci_subject1/eeg_observational.png), [output metadata](results/eegbci_subject1/eeg_observational_metadata.json) and [reproduction report](docs/physionet_observational_result.md). This is a single-participant descriptive analysis, not a perturbation experiment, statistical group finding or evidence of cross-participant generalization.
+
+
+### Example from public EEG recordings
+
+![Actual observational output for one participant in PhysioNet EEGBCI](results/eegbci_subject1/eeg_observational.png)
+
+*Single-participant observational illustration (30 training and 15 held-out trials). This is not evidence of brain-state restoration or a validated clinical result.*
 
 ## Testing and scientific scope
 
